@@ -1,0 +1,76 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
+header {
+    background-color: #ff0000; /* Rojo Pokémon */
+    color: #ffffff; /* Blanco */
+    padding: 20px 50px; /* Aumentar el padding horizontal */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid #ffffff; /* Borde inferior blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto elevado */
+    height: 100px;
+}
+
+/* Estilos para el logo */
+header .logo img {
+    width: 60px; /* Tamaño del logo */
+    height: auto;
+    transition: transform 0.3s ease; /* Efecto de transformación al pasar el ratón */
+}
+
+header .logo img:hover {
+    transform: rotate(360deg); /* Gira el logo al pasar el ratón */
+}
+
+/* Estilos para el título */
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Pokemon Solid', sans-serif; /* Fuente estilo Pokémon (necesitas importarla) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+}
+
+/* Estilos para la navegación */
+header nav {
+    display: flex;
+    gap: 30px; /* Aumentar el espacio entre enlaces */
+}
+
+header nav a {
+    color: #ffffff; /* Blanco */
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px; /* Añadir padding a los enlaces */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #ff0000; /* Texto rojo */
+    transform: translateY(-3px); /* Efecto de elevación */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    
+    header h1 {
+        margin-bottom: 20px;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 15px; /* Espacio entre enlaces en modo móvil */
+    }
+
+    header nav a {
+        padding: 10px 15px; /* Ajustar padding en modo móvil */
+    }
+}
