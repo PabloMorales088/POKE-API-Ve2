@@ -1,12 +1,11 @@
-/* documentacion.component.css */
 .info-container {
-    background-color: #ffffff; /* Fondo blanco */
-    border: 3px solid #ff4500; /* Borde rojo anaranjado */
-    border-radius: 15px; /* Bordes redondeados */
+    background-color: #ffffff; 
+    border: 3px solid #ff4500; 
+    border-radius: 15px; 
     padding: 25px;
     margin: 20px;
     text-align: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra para efecto elevado */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -14,11 +13,10 @@
     margin-top: 70px;
 }   
 
+    
 
-
-/* Estilos para el título de la información */
 .info-container h2 {
-    color: #ff4500; /* Rojo anaranjado */
+    color: #ff4500;
     font-size: 2.5em;
     margin-bottom: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -63,23 +61,22 @@
     transform: translate(-50%, -50%) scale(1);
 }
 
-/* Estilos para la sección facultad-solucion */
 .facultad-solucion {
     margin-top: 30px;
     padding: 20px;
-    border: 2px solid #ff4500; /* Borde rojo anaranjado */
+    border: 2px solid #ff4500;
     border-radius: 10px;
     background-color: #f9f9f9;
     text-align: left;
 }
 
 .facultad-solucion h3 {
-    color: #ff4500; /* Rojo anaranjado */
+    color: #ff4500;
     font-size: 1.8em;
     margin-bottom: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid #ff4500; /* Línea inferior */
+    border-bottom: 1px solid #ff4500; 
     padding-bottom: 5px;
 }
 
@@ -90,22 +87,21 @@
 }
 
 .facultad-solucion ul li {
-    margin-bottom: 10px; /* Mayor separación entre elementos */
+    margin-bottom: 10px; 
     font-size: 1.1em;
-    color: #444444; /* Color de texto más oscuro */
-    line-height: 1.6; /* Mayor interlineado */
+    color: #444444; 
+    line-height: 1.6; 
 }
 
 .facultad-solucion ul li::before {
     content: "•";
-    color: #ff4500; /* Viñeta rojo anaranjado */
+    color: #ff4500; 
     font-weight: bold;
     display: inline-block;
     width: 1em;
     margin-left: -1em;
 }
 
-/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     .info-container {
         padding: 20px;

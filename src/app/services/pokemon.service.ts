@@ -16,9 +16,11 @@ export class PokemonService {
     this._httpClient = httpClient;
   }
   
-  public getList(): Observable<Response>{
-    return this._httpClient.get<Response>(this._urlBase);
+  public getList(offset: number = 0, limit: number = 20): Observable<Response> {
+    const url = `${this._urlBase}?offset=${offset}&limit=${limit}`;
+    return this._httpClient.get<Response>(url);
   }
+  
 
   public getDetail(id: number): Observable<PokemonDetail>{
     return this._httpClient.get<PokemonDetail>(this._urlBase + "/" + id);
