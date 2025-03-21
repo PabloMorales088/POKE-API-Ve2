@@ -1,19 +1,27 @@
+<!-- Se muestra el contenedor solo si existe un objeto 'pokemon' -->
 <div *ngIf="pokemon != undefined" class="detalle-usuario">
+
+  <!-- Muestra el nombre del Pokémon y lo transforma a formato título (primera letra mayúscula) -->
   <h2>Detalle de {{ pokemon.name | titlecase }}</h2>
 
+  <!-- Carga la imagen del sprite por defecto del Pokémon -->
   <img [src]="pokemon.sprites?.front_default" alt="Imagen de {{ pokemon.name }}" />
 
+  <!-- Muestra la altura directamente del objeto -->
   <div class="detalle">
     <label>Altura:</label>
     <span>{{ pokemon.height }}</span>
   </div>
 
+  <!-- Muestra el peso directamente del objeto -->
   <div class="detalle">
     <label>Peso:</label>
     <span>{{ pokemon.weight }}</span>
   </div>
 
+  <!-- Muestra la lista de tipos que tiene el Pokémon -->
   <div class="type">
+    <!-- Recorre el array 'types'. Por cada tipo, genera un span -->
     <span 
       *ngFor="let type of pokemon.types"
       class="type {{ type?.type?.name }}"

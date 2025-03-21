@@ -1,11 +1,38 @@
 <header>
-    <div class="logo">
-      <img src="https://pngimg.com/uploads/pokeball/pokeball_PNG19.png" alt="Logo">
-    </div>
-    <h1>Poke-API</h1>
-    <nav>
-      <a href="#">Inicio</a>
-      <a href="detail">Detalles</a>
-      <a href="#">Contacto</a>
-    </nav>
-  </header>
+  <div class="logo">
+    <img src="https://pngimg.com/uploads/pokeball/pokeball_PNG19.png" alt="Logo">
+  </div>
+
+  <h1>Poke-API</h1>
+
+  <nav>
+    <a routerLink="/">Inicio</a>
+    <a (click)="abrirJuego()">Jugar</a> <!-- Cambiado a segundo -->
+    <a href="#">Contacto</a>
+  </nav>
+</header>
+
+<!-- MODAL DEL JUEGO -->
+<div class="modal" *ngIf="juegoActivo">
+  <div class="modal-content">
+    <span class="close" (click)="cerrarJuego()">&times;</span>
+
+    <h2>¿Quién es ese Pokémon?</h2>
+
+    <img 
+      [src]="pokemonActual?.imagen" 
+      alt="Pokémon Silueta" 
+      class="pokemon-silueta"
+    >
+
+    <input 
+      type="text" 
+      placeholder="Escribe el nombre..." 
+      [(ngModel)]="respuestaUsuario"
+    >
+
+    <button (click)="comprobarRespuesta()">Adivinar</button>
+
+    <p *ngIf="resultado" class="resultado">{{ resultado }}</p>
+  </div>
+</div>

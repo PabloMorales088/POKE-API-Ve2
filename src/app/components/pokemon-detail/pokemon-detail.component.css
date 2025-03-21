@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .detalle-usuario {
+    font-family: 'Press Start 2P', cursive;
     background-color: #ffffff;
     border: 3px solid #ff0000;
     border-radius: 15px;
@@ -10,11 +13,9 @@
     position: relative;
 }
 
-
-
 .detalle-usuario h2 {
     color: #ff0000;
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -23,7 +24,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
-    font-size: 1.2em;
+    font-size: 0.8em;
 }
 
 .detalle label {
@@ -59,6 +60,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    font-size: 0.7em;
 }
 
 .type label {
@@ -86,3 +88,18 @@
     color: #ff0000;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
+
+.detalle-usuario img {
+    width: 200px;
+    height: auto;
+    border: 3px solid #ff0000;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    margin-top: 40px;
+
+}
+

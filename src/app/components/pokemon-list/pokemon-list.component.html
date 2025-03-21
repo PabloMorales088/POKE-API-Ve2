@@ -1,10 +1,15 @@
 <main>
+  <!-- Recorre el array de pokemons y genera un div por cada uno -->
   <div *ngFor="let pokemon of pokemons">
+
+    <!-- Enlace que apunta a la URL de detalle del Pokémon -->
     <a href="{{getDetailUrl(pokemon)}}">
+
       <div class="card">
         <img src="{{getImageByUrl(pokemon)}}" alt="Imagen 1">
         <h3>{{pokemon.name | titlecase}}</h3>
       </div>
+
     </a>
   </div>
 </main>
@@ -12,5 +17,4 @@
 <div class="pagination">
   <button (click)="anterior()" [disabled]="paginaActual === 1">Anterior</button>
   <button (click)="siguiente()">Siguiente</button>
-
 </div>

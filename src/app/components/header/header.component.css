@@ -1,4 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* ===========================
+   HEADER Y NAVEGACIÓN
+   =========================== */
 
 header {
     background-color: #ff0000; 
@@ -42,6 +47,7 @@ header nav a {
     padding: 10px 20px; 
     border-radius: 10px; 
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
 }
 
 header nav a:hover {
@@ -69,4 +75,114 @@ header nav a:hover {
     header nav a {
         padding: 10px 15px; 
     }
+}
+
+/* ===========================
+   MODAL DEL JUEGO - ¿QUIÉN ES ESE POKÉMON?
+   =========================== */
+
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 30px 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 15px;
+    border: 3px solid #ff0000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.modal-content h2 {
+    font-family: 'Pokemon Solid', sans-serif;
+    color: #ff0000;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    color: #ff0000;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.modal-content .close:hover {
+    color: #333333;
+    transform: scale(1.2);
+}
+
+.pokemon-silueta {
+    width: 150px;
+    height: auto;
+    filter: brightness(0) contrast(100%);
+    margin: 20px auto;
+    transition: transform 0.3s ease;
+}
+
+.pokemon-silueta:hover {
+    transform: scale(1.1);
+}
+
+.modal-content input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8em;
+    color: #333333;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.modal-content input:focus {
+    box-shadow: 0 0 8px #ff0000;
+}
+
+.modal-content button {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #ffffff;
+    color: #ff0000;
+    border: 2px solid #ff0000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.resultado {
+    margin-top: 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #333333;
 }
